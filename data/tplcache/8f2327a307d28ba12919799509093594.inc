@@ -1,0 +1,1 @@
+<div class="item" style="background-image:url([field:picname/])"></div>

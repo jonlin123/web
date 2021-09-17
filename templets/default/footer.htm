@@ -1,0 +1,132 @@
+<footer id="footer-sec" class="footer">
+  <div class="footer-section pad-40-x0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-12 foot-about">
+          <div class="footer-widget-2 text-center-x"> <a href="/" class="footer-logo"><img src="/skin/images/logo-footer.png"/></a>
+            <div class="f-about">
+              <p> {dede:sql sql='Select content from dede_arctype where id=9'} 
+                [field:content  function='cn_substr(html2text(@me),500)'/]...
+                {/dede:sql} </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 hidden-sm hidden-xs foot-contact"> {dede:type typeid='17'}
+          <h2 class="ft-title"><span><a href="[field:typelink/]">[field:typename/]</a></span></h2>
+          {/dede:type}
+          <div class="footer-widget-1 address">
+            <ul>
+              <li> <i class="fa fa-map-marker"></i> 地 址：{dede:global.cfg_adr/} </li>
+              <li> <i class="fa fa-globe"></i> 电话：{dede:global.cfg_tel/} </li>
+              <li> <i class="fa fa-phone"></i> 手机：{dede:global.cfg_phone/} </li>
+              <li> <i class="fa fa-fax"></i> 传真：{dede:global.cfg_fax/} </li>
+              <li> <i class="fa fa-envelope"></i> 邮箱：<a href="mailto:{dede:global.cfg_email/}">{dede:global.cfg_email/}</a> </li>
+              <li> <i class="fa fa-home"></i> 网址：{dede:global.cfg_basehost/} </li>
+            </ul>
+          </div>
+        </div>
+        {dede:channelartlist typeid='1,1'}
+        <div class="col-md-3 col-sm-6 hidden-sm hidden-xs foot-nav">
+          <h2 class="ft-title"><span><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></span></h2>
+          <div id="twitter-feed" class="twitter-feed">
+            <ul class="foot-nav-menu">
+              {dede:channel type='son' noself='yes'}
+              <li><a href="[field:typeurl/]"><i class="fa fa-caret-right"></i> &nbsp;[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </div>
+        </div>
+        {/dede:channelartlist}
+        <div class="col-md-3 col-sm-6 hidden-sm hidden-xs foot-qrcode">
+          <h2 class="ft-title"><span>扫描二维码</span></h2>
+          <div class="f-qrcode"> <img src="/skin/images/qrcode.png"/> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-sm-12 copy-left"> <small>{dede:global.cfg_powerby/}</small> </div>
+        <div class="col-md-3 col-sm-12 copy-right">
+          <ul class="foot-menu">
+            <li class="active"><a href="{dede:global.cfg_weibo/}" target="_blank"><i class="fa fa-weibo"></i></a></li>
+            <li><a href="{dede:global.cfg_qqweibo/}" target="_blank"><i class="fa fa-tencent-weibo"></i></a></li>
+            <li><a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" target="_blank"><i class="fa fa-qq"></i></a></li>
+            <li><a href="{dede:global.cfg_shop/}" target="_blank"><i class="fa fa-shopping-cart"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<a href="#" id="back-to-top" class="back-to-top"><i class="fa fa-angle-up"></i></a> 
+<script type="text/javascript" src="/skin/js/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.appear.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.accordion.js"></script> 
+<script type="text/javascript" src="/skin/js/isotope.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.fitvids.js"></script> 
+<!--<script type="text/javascript" src="/skin/js/jquery.tooltipster.min.js"></script>
+<script type="text/javascript">window.onerror=function(){return true;}</script>
+<script type="text/javascript" src="/skin/js/jquery.countto.js"></script>
+<script type="text/javascript" src="/skin/js/countdown-timer.js"></script>
+<script type="text/javascript" src="/skin/js/tweetie.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.easypiechart.min.js"></script>--> 
+<script type="text/javascript" src="/skin/js/script.js"></script>
+<nav id="mmenu" class="noDis">
+  <div class="mmDiv">
+    <div class="MMhead"> <a href="#mm-0" class="closemenu noblock">X</a> <a href="{dede:global.cfg_weibo/}" target="_blank" class="noblock"><i class="fa fa-weibo"></i></a> <a href="{dede:global.cfg_qqweibo/}" target="_blank" class="noblock"><i class="fa fa-tencent-weibo"></i></a> <!--<a href="" target="_blank" class="noblock">English</a>--> </div>
+    <div class="mm-search">
+      <form  class="mm-search-form" name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <input type="text" autocomplete="off" value="" name="q" class="side-mm-keyword" placeholder="输入关键字..."/>
+      </form>
+    </div>
+    <ul>
+      <li class="m-Lev1"><a href="/">网站首页</a></li>
+      {dede:channelartlist typeid='top'}
+      <li class="m-Lev1"> <a href="{dede:field name='typeurl'/}" class="m-menu1">{dede:field name='typename'/}</a>
+        <ul class="m-submenu">
+          {dede:channel type='son' noself='yes'}
+          <li class="Lev2"> <a href="[field:typeurl/]" class="m-menu2">[field:typename/]</a> </li>
+          {/dede:channel}
+        </ul>
+      </li>
+      {/dede:channelartlist}
+    </ul>
+  </div>
+</nav>
+<link type="text/css" rel="stylesheet" href="/skin/css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="/skin/js/jquery.mmenu.all.min.js"></script> 
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	var mmenu=$('nav#mmenu').mmenu({
+		slidingSubmenus: true,
+		classes		: 'mm-white', //mm-fullscreen mm-light
+		extensions	: [ "theme-white" ],
+		offCanvas	: {
+			position: "right", //left, top, right, bottom
+			zposition: "front" //back, front,next
+			//modal		: true
+		},
+		searchfield		: false,
+		counters		: false,
+		//navbars		: {
+			//content : [ "prev", "title", "next" ]
+		//},
+		navbar 		: {
+			title : "网站导航"
+		},
+		header			: {
+			add		: true,
+			update	: true,
+			title	: "网站导航"
+		}
+	});
+	$(".closemenu").click(function() {
+		var mmenuAPI = $("#mmenu").data( "mmenu" );
+		mmenuAPI.close();
+	});
+});
+</script>

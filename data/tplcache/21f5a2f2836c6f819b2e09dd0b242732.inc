@@ -1,0 +1,1 @@
+<h2 class="ft-title"><span><a href="[field:typelink/]">[field:typename/]</a></span></h2>

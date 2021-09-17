@@ -1,0 +1,1 @@
+<h2 class="lg-title text-center"><span><a href="[field:typelink/]">[field:typename/]</a></span></h2>

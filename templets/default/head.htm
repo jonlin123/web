@@ -1,0 +1,54 @@
+<div class="top-header hidden-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-8 topbar-left">
+        <div class="top-phone pull-left"><i class="fa fa-phone"></i> &nbsp;{dede:global.cfg_tel/}</div>
+        <div class="top-email pull-left"> <a href="mailto:{dede:global.cfg_email/}"><i class="fa fa-envelope-o"></i> &nbsp;{dede:global.cfg_email/}</a> </div>
+      </div>
+      <div class="col-md-5 col-sm-4 topbar-right">
+        <div class="social-icon">
+          <ul>
+            <li><a href="{dede:global.cfg_weibo/}" target="_blank"><i class="fa fa-weibo"></i></a></li>
+            <li><a href="{dede:global.cfg_qqweibo/}" target="_blank"><i class="fa fa-tencent-weibo"></i></a></li>
+            <li><a href="http://wpa.qq.com/msgrd?v=3&amp;uin={dede:global.cfg_qq/}&amp;site=qq&amp;menu=yes" target="_blank"><i class="fa fa-qq"></i></a></li>
+            <li><a href="{dede:global.cfg_shop/}" target="_blank"><i class="fa fa-shopping-cart"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="header" id="header" role="banner">
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-header"> <a class="navbar-toggle collapsed mmenu-btn" href="#mmenu"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="navbar-brand" href="/"><img class="img-responsive" src="/skin/images/logo.png" alt="{dede:global.cfg_webname/}"/></a> </div>
+      <nav class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          <li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='Lev1 active' ":@me="";{/dede:field}> <a class="menu1" href="/">网站首页</a></li>
+          {dede:channelartlist typeid='top' currentstyle='active'}
+          <li class="Lev1 dropdown {dede:field.currentstyle/}"> <a href="{dede:field name='typeurl'/}" class="menu1 dropdown-toggle" data-toggle="dropdown">{dede:field name='typename'/} 
+            {dede:field name=typeid runphp="yes"}
+            global $dsql;
+            $sql = "SELECT id From `dede_arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+            $row = $dsql->GetOne($sql);      
+            @me=is_array($row)?'<i class="fa fa-caret-down"></i>':'';
+            {/dede:field}</a>
+            <ul {dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->
+              GetOne($sql);
+              @me=is_array($row)?'class="dropdown-menu sub-menu2" role="menu"':'style="display:none"';
+              {/dede:field}>
+              
+              {dede:channel type='son' noself='yes'}
+              <li class="Lev2"> <a href="[field:typeurl/]" class="menu2">[field:typename/]</a> </li>
+              {/dede:channel}
+            </ul>
+          </li>
+          {/dede:channelartlist}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

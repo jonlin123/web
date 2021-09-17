@@ -1,0 +1,71 @@
+{dede:config.pagesize value="20"/}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+<title>用户管理</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<script language="javascript" src="../include/js/dedeajax2.js"></script>
+<script language="javascript" src="js/ieemu.js"></script>
+<script language="javascript" src="js/context_menu.js"></script>
+<script language="javascript" src="js/main.js"></script>
+<script language="javascript" src="js/list.js"></script>
+</head>
+<body background='images/allbg.gif' leftmargin='8' topmargin='8'>
+<table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#D6D6D6">
+  <tr>
+    <td height="27" colspan="6" background="images/tbg.gif" bgcolor="#E7E7E7">
+    	<table width="96%" border="0" cellspacing="1" cellpadding="1">
+        <tr>
+          <td width="24%" style="padding-left:10px;"><b>用户管理</b> </td>
+        </tr>
+      </table>
+     </td>
+  </tr>
+  <tr bgcolor="#FBFCE2">
+    <td width="4%" height="24" align="center">选择</td>
+    <td width="10%" height="24" align="center">ID</td>
+    <td width="13%" align="center">QQ</td>
+    <td width="22%" align="center">微信</td>
+    <td width="22%" align="center">添加时间</td>
+    <td width="23%" align="center">操作</td>
+  </tr>
+  {dede:datalist}
+  <tr bgcolor="#FFFFFF" align="center">
+    <td>
+      <input name="arcID" type="checkbox" id="arcID" value="{dede:field.id/}" class="np" />
+    </td>
+    <td rowspan="2">{dede:field.id /}</td>
+    <td rowspan="2">{dede:field.qq /}<br> </td>
+    <td rowspan="2">{dede:field.wechat /}</td>
+    <td rowspan="2">{dede:field.add_time /}</td>
+    <td rowspan="2">
+     <a href='sys_user_edit.php?id={dede:field.id/}&userid={dede:field.userid/}&dopost=delete'><u>删除</u></a>
+    </td>
+  </tr>
+  <tr>
+  {/dede:datalist}
+  <tr bgcolor="#ffffff">
+    <td height="36" colspan="10">
+      &nbsp;
+      <a href="javascript:selAll()" class="coolbg">全选</a>
+      <a href="javascript:noSelAll()" class="coolbg">取消</a>
+      <a href="javascript:updateArc(0)" class="coolbg">&nbsp;更新&nbsp;</a>
+      <a href="javascript:checkArc(0)" class="coolbg">&nbsp;审核&nbsp;</a>
+      <a href="javascript:adArc(0)" class="coolbg">&nbsp;推荐&nbsp;</a>
+      <a href="javascript:;" onClick="moveArc(event,this,<?php echo (empty($channelid) ? 0 : $channelid); ?>)" class="coolbg">&nbsp;移动&nbsp;</a>
+      <a href="javascript:delArc(0)" class="coolbg">&nbsp;删除&nbsp;</a>
+      <?php if($channelid==1) echo "	<a href=\"javascript:kwArc(0)\" class=\"coolbg\">&nbsp;自动关键字&nbsp;</a>\r\n"; ?>
+      <a href="javascript:;" onClick="cAtts('attsAdd',event,this)" class="coolbg">&nbsp;增加属性&nbsp;</a>
+      <a href="javascript:;" onClick="cAtts('attsDel',event,this)" class="coolbg">&nbsp;删除属性&nbsp;</a>
+    </td>
+  </tr>
+  <tr bgcolor="#F9FCEF">
+    <td height="24" colspan="6" align="center" valign="top">
+    	{dede:pagelist listsize='7' /}
+    </td>
+  </tr>
+</table>
+</body>
+</html>

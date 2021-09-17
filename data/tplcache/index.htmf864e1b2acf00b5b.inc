@@ -1,0 +1,46 @@
+<?php
+$z[0]=Array("global","",347,373);
+$z[0][4]=array();
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",417,447);
+$z[1][4]=array();
+$z[1][4]['name']="cfg_description";
+$z[2]=Array("global","",484,511);
+$z[2][4]=array();
+$z[2][4]['name']="cfg_keywords";
+$z[3]=Array("include","",3480,3515);
+$z[3][4]=array();
+$z[3][4]['filename']="head.htm";
+$z[4]=Array("arclist","\r\n    <div class=\"item\" style=\"background-image:url([field:picname/])\"></div>\r\n    ",3612,3768);
+$z[4][4]=array();
+$z[4][4]['typeid']="20";
+$z[4][4]['titlelen']="50";
+$z[4][4]['orderby']="pubdate";
+$z[5]=Array("arclist","\r\n        <div class=\"col-md-3 col-sm-6 col-xs-6 iw4-item\">\r\n          <div class=\"team-wrap text-center\">\r\n            <div class=\"team-img\"> <a href=\"[field:arcurl/]\"><img class=\"img-responsive\" src=\"[field:picname/]\" alt=\"[field:title/]\"/></a>\r\n              <div class=\"team-social\"><a href=\"[field:arcurl/]\"><i class=\"fa fa-eye\"></i></a></div>\r\n            </div>\r\n            <div class=\"team-content\">\r\n              <h4><a href=\"[field:arcurl/]\">[field:title/]</a></h4>\r\n              <span class=\"designation\">[field:typename/]</span>\r\n              <p class=\"desc\">[field:description function=\"cn_substr(@me,120)\"/]...</p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        ",3939,4715);
+$z[5][4]=array();
+$z[5][4]['typeid']="5";
+$z[5][4]['row']="4";
+$z[5][4]['titlelen']="50";
+$z[5][4]['orderby']="pubdate";
+$z[6]=Array("type","\r\n        <h2 class=\"lg-title text-center\"><span><a href=\"[field:typelink/]\">[field:typename/]</a></span></h2>\r\n        ",7730,7884);
+$z[6][4]=array();
+$z[6][4]['typeid']="1";
+$z[7]=Array("arclist","\r\n        <div class=\"item\"> <a href=\"[field:arcurl/]\" class=\"thumb-link\"><img src=\"[field:picname/]\" alt=\"[field:title/]\"/></a>\r\n          <h2 class=\"iport-title\"><a href=\"[field:arcurl/]\" title=\"[field:title/]\">[field:title/]</a></h2>\r\n          <p class=\"desc\">[field:description function=\"cn_substr(@me,120)\"/]...</p>\r\n          <a href=\"[field:arcurl/]\" class=\"btn btn-causes\">查看详细</a> </div>\r\n        ",8072,8559);
+$z[7][4]=array();
+$z[7][4]['typeid']="1";
+$z[7][4]['titlelen']="50";
+$z[7][4]['orderby']="pubdate";
+$z[8]=Array("sql"," \r\n            [field:content  function='cn_substr(html2text(@me),800)'/]...\r\n            ",8874,9035);
+$z[8][4]=array();
+$z[8][4]['sql']="Select content from dede_arctype where id=9";
+$z[9]=Array("type"," <a class=\"btn btn-join\" href=\"[field:typelink/]\">了解更多</a> ",10411,10512);
+$z[9][4]=array();
+$z[9][4]['typeid']="9";
+$z[10]=Array("channelartlist","\r\n<section id=\"utility\" class=\"utility\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 col-sm-12 col-xs-12\">\r\n        <h2 class=\"lg-title text-center\"><span><a href=\"{dede:field name='typeurl'/}\">{dede:field name='typename'/}</a></span></h2>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12\">\r\n        <div id=\"blog-carousel\" class=\"blog-carousel\"> {dede:arclist row='5' titlelen='50' orderby='pubdate'}\r\n          <div class=\"item\"> <a href=\"[field:arcurl/]\" class=\"thumb-link\"><img src=\"[field:picname/]\" alt=\"[field:title/]\"/></a>\r\n            <h4 class=\"title\"><a href=\"[field:arcurl/]\" title=\"[field:title/]\">[field:title/]</a></h4>\r\n            <div class=\"meta\"> <span><i class=\"fa fa-calendar\"></i> [field:pubdate function=\"MyDate('Y-m-d',@me)\"/]</span> <span> / by [field:writer/]</span> </div>\r\n            <p class=\"desc\">[field:description function=\"cn_substr(@me,160)\"/]...</p>\r\n          </div>\r\n          {/dede:arclist} </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</section>\r\n",10569,11681);
+$z[10][4]=array();
+$z[10][4]['typeid']="16,16";
+$z[11]=Array("include","",11685,11722);
+$z[11][4]=array();
+$z[11][4]['filename']="footer.htm";
+
+?>

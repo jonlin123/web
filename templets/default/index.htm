@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit" />
+<meta name="robots" content="index, follow" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by 1pzy.com" />
+<link rel="stylesheet" href="/skin/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/skin/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="/skin/css/animate.css"/>
+<link rel="stylesheet" href="/skin/css/jquery.fancybox.css"/>
+<link rel="stylesheet" href="/skin/css/owl.carousel.css"/>
+<!--<link rel="stylesheet" href="/skin/css/tooltipster.css"/>-->
+<link rel="stylesheet" href="/skin/css/style.css"/>
+<link rel="stylesheet" href="/skin/css/orange-2.css"/>
+<link rel="stylesheet" href="/skin/css/responsive.css"/>
+<link rel="stylesheet" href="/skin/css/tk.css"/>
+<script type="text/javascript" src="/skin/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/skin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/skin/js/owl.carousel.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.fancybox.pack.js"></script>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+<script src="/skin/js/html5.js"></script>
+<script src="/skin/js/respond.min.js"></script>
+<style>
+	article,aside,dialog,footer,header,section,nav,figure,menu{display:block;padding:0;margin:0;}
+</style>
+<link rel="stylesheet" href="/skin/css/ie.css" type="text/css" media="screen"/>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="/skin/js/jquery.placeholder.js"></script>
+<script>
+jQuery(document).ready(function($){
+	$('input, textarea').placeholder();
+});
+</script>
+<script type="text/javascript" src="/skin/js/pie.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$('.indexci img').each(function() {
+		PIE.attach(this);
+	});
+});
+</script>
+<![endif]-->
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="/skin/js/selectivizr.js"></script>
+  <script type="text/javascript" src="/skin/js/excanvas.compiled.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+<div class="body-inner" id="page-body-wrap">
+
+  <section id="slideshow" class="slideshow">
+  <img src="/images/sy1.jpg" alt="" width="100%">
+  <img src="/images/sy2.jpg" alt="" width="100%">
+  <img src="/images/sy3.jpg" alt="" width="100%">
+  <img src="/images/sy4.jpg" alt="" width="100%">
+</section>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">手游诚招一级代理</h4>
+          <span>微信号：sww19791126</span>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="txt_QQ">QQ</label>
+            <input type="text" name="txt_QQ" class="form-control" id="txt_QQ" placeholder="QQ">
+          </div>
+          <div class="form-group">
+            <label for="txt_wechat">微信</label>
+            <input type="text" name="txt_wechat" class="form-control" id="txt_wechat" placeholder="微信">
+          </div>
+          <span style="color: red;font-size: 12px;">注意：qq/微信至少填写一样</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+          <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer-sec" class="footer">
+    <div class="footer-section pad-40-x0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 ">
+            <h2 class="ft-title" style="margin-bottom: 10px"><span>扫描二维码添加代理</span></h2>
+
+            <div class="f-qrcode" style="float: left;width: 50%;">
+              <div style="margin-left: 20%">QQ</div>
+              <img src="/skin/images/qrcode.png" style="width: 60%;margin-left: 20%"/>
+            </div>
+            <div class="f-qrcode" style="float: left;width: 50%;">
+              <div style="margin-left: 20%">微信</div>
+              <img src="/skin/images/qrcode.png" style="width: 60%;margin-left: 20%"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+<script type="text/javascript">
+
+  setTimeout(function(){
+    $('#myModal').modal();
+  },1000)
+
+  $('#btn_submit').click(function () {
+    var qq = $('#txt_QQ').val();
+    var wechat = $('#txt_wechat').val();
+    if(qq == '' && wechat == ''){
+      alert('请输入QQ或微信');
+      location.reload();
+    }else{
+      $.ajax({
+        url:"/m/user.php?action=add",
+        type: "post",
+        data: {
+           "qq": qq,
+           "wechat": wechat
+        },
+        success: function (returnValue) {
+          returnValue = JSON.parse(returnValue)
+          console.log(returnValue);
+          alert(returnValue.msg);
+        },
+        error: function (returnValue) {
+          alert("对不起！数据加载失败！");
+        }
+      })
+
+    }
+  });
+</script>
+</html>

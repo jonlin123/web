@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit" />
+<meta name="robots" content="index, follow" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by 1pzy.com" />
+<link rel="stylesheet" href="/skin/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/skin/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="/skin/css/animate.css"/>
+<link rel="stylesheet" href="/skin/css/jquery.fancybox.css"/>
+<link rel="stylesheet" href="/skin/css/owl.carousel.css"/>
+<!--<link rel="stylesheet" href="/skin/css/tooltipster.css"/>-->
+<link rel="stylesheet" href="/skin/css/style.css"/>
+<link rel="stylesheet" href="/skin/css/orange-2.css"/>
+<link rel="stylesheet" href="/skin/css/responsive.css"/>
+<link rel="stylesheet" href="/skin/css/tk.css"/>
+<script type="text/javascript" src="/skin/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/skin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skin/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/skin/js/owl.carousel.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.fancybox.pack.js"></script>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+<script src="/skin/js/html5.js"></script>
+<script src="/skin/js/respond.min.js"></script>
+<style>
+	article,aside,dialog,footer,header,section,nav,figure,menu{display:block;padding:0;margin:0;}
+</style>
+<link rel="stylesheet" href="/skin/css/ie.css" type="text/css" media="screen"/>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="/skin/js/jquery.placeholder.js"></script>
+<script>
+jQuery(document).ready(function($){
+	$('input, textarea').placeholder();
+});
+</script>
+<script type="text/javascript" src="/skin/js/pie.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$('.indexci img').each(function() {
+		PIE.attach(this);  
+	});  
+});
+</script>
+<![endif]-->
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="/skin/js/selectivizr.js"></script>
+  <script type="text/javascript" src="/skin/js/excanvas.compiled.js"></script>
+<![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+	<div class="lt-ie8-bg">
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser.</p>
+		<p>Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<p class="browsehappy">对不起，您正在使用的是 <strong>过时</strong> 的浏览器.</p>
+		<p>请升级您的浏览器（IE8+，或者是火狐、谷歌、Opera、Safari等现代浏览器），以改进您的用户体验！</p>
+	</div>
+	<style>
+	.lt-ie8-bg{z-index:11111;position:absolute;top:0;left:0;right:0;bottom:0;background-color:#333;color:#999;padding:100px 20px;text-align:center;font-size:26px}
+	.lt-ie8-bg a{color:#f5f5f5;border-bottom:2px solid #fff}
+	.lt-ie8-bg a:hover{text-decoration:none}
+	#page-body-wrap{display:none;}
+	</style>
+<![endif]-->
+<div id="preloader"></div>
+<div class="body-inner" id="page-body-wrap">
+{dede:include filename="head.htm"/}
+<section id="slideshow" class="slideshow">
+  <div id="main-slideshow" class="main-slideshow"> {dede:arclist typeid='20' titlelen='50' orderby='pubdate'}
+    <div class="item" style="background-image:url([field:picname/])"></div>
+    {/dede:arclist} </div>
+</section>
+<section id="volunteer-section" class="volunteer-section">
+  <div class="volunteers pad-b-40">
+    <div class="container">
+      <div class="row"> {dede:arclist typeid='5' row='4' titlelen='50' orderby='pubdate'}
+        <div class="col-md-3 col-sm-6 col-xs-6 iw4-item">
+          <div class="team-wrap text-center">
+            <div class="team-img"> <a href="[field:arcurl/]"><img class="img-responsive" src="[field:picname/]" alt="[field:title/]"/></a>
+              <div class="team-social"><a href="[field:arcurl/]"><i class="fa fa-eye"></i></a></div>
+            </div>
+            <div class="team-content">
+              <h4><a href="[field:arcurl/]">[field:title/]</a></h4>
+              <span class="designation">[field:typename/]</span>
+              <p class="desc">[field:description function="cn_substr(@me,120)"/]...</p>
+            </div>
+          </div>
+        </div>
+        {/dede:arclist} </div>
+    </div>
+  </div>
+</section>
+<section id="current-cause" class="current-cause pad-40 parallax pbg1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2">
+        <h2 class="lg-title-2 white-text text-center">爱玛，更高端的电动车</h2>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2">
+        <p class="lg-text text-center white-text">中国领先的绿色能源电动两轮车品牌，销售至国际超过60个国家的客户，在从中国出口的电动两轮车销售量方面领先同行。</p>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 pad-30">
+        <div class="progress">
+          <div class="progress-bar" style="width: 75%;"><span class="block"></span></div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="text-center">
+          <div class="stats white-text">
+            <h4><i class="fa fa-star"></i></h4>
+            更佳设计</div>
+          <div class="stats white-text">
+            <h4><i class="fa fa-cogs"></i></h4>
+            更高科技</div>
+          <div class="stats white-text">
+            <h4><i class="fa fa-empire"></i></h4>
+            更优品质</div>
+          <div class="stats white-text">
+            <h4><i class="fa fa-cubes"></i></h4>
+            更精制造</div>
+          <div class="stats white-text">
+            <h4><i class="fa fa-heart-o"></i></h4>
+            更好服务</div>
+          <div class="stats white-text">
+            <h4><i class="fa fa-external-link"></i></h4>
+            更多出口</div>
+        </div>
+        <div class="donate-button text-center"> <a class="btn btn-donate"><i class="fa fa-paper-plane"></i> 2014年签约国际巨星李敏镐</a> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="clients" class="clients pad-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h2 class="lg-title text-center"><span><a>产品系列</a></span></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div id="client-slider" class="client-slider">
+        <div class="item"><a><img src="/skin/images/573aae263687b.png"></a></div>
+        <div class="item"><a><img src="/skin/images/573aae34d3e5e.png"></a></div>
+        <div class="item"><a><img src="/skin/images/573aae4450231.png"></a></div>
+        <div class="item"><a><img src="/skin/images/573aae5161a91.png"></a></div>
+        <div class="item"><a><img src="/skin/images/573aae6008d8a.png"></a></div>
+        <div class="item"><a><img src="/skin/images/573aae6cecc9e.png"></a></div>
+        <div class="item"><a><img src="/skin/images/573aae7af1af4.png"></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="causes-header" class="causes-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12"> {dede:type typeid='1'}
+        <h2 class="lg-title text-center"><span><a href="[field:typelink/]">[field:typename/]</a></span></h2>
+        {/dede:type} </div>
+    </div>
+  </div>
+</section>
+<section id="causes" class="causes">
+  <div class="container">
+    <div class="row">
+      <div id="causes-carousel" class="causes-carousel"> {dede:arclist typeid='1' titlelen='50' orderby='pubdate'}
+        <div class="item"> <a href="[field:arcurl/]" class="thumb-link"><img src="[field:picname/]" alt="[field:title/]"/></a>
+          <h2 class="iport-title"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+          <p class="desc">[field:description function="cn_substr(@me,120)"/]...</p>
+          <a href="[field:arcurl/]" class="btn btn-causes">查看详细</a> </div>
+        {/dede:arclist} </div>
+    </div>
+  </div>
+</section>
+<section id="extensions" class="extensions pad-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-12 iabout-left">
+        <h2 class="lg-title-2">更高端的电动车</h2>
+        <div class="iabout-text">
+          <p> {dede:sql sql='Select content from dede_arctype where id=9'} 
+            [field:content  function='cn_substr(html2text(@me),800)'/]...
+            {/dede:sql} </p>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="icon-list">
+              <ul class="fa-ul">
+                <li><i class="fa-li fa fa-star"></i> <strong>更佳设计</strong>，我们委聘若干国际著名的设计公司，协助我们开发下一代高端电动两轮车产品，</li>
+                <li><i class="fa-li fa fa-empire"></i> <strong>更高科技</strong>，我们与专门开发和制造尖端电动两轮车的美国公司 Lightning Motors 订立战略合作协议共同研究及开发高端产品。</li>
+                <li><i class="fa-li fa fa-gears"></i> <strong>更优品质</strong>，爱玛通过采用高标准的零配件供应，建设高标准的品质检验体系，严格把控产品品质，连续10年高端销量遥遥领先。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 iabout-right">
+        <div class="volunteer text-center"> <img class="img-responsive" src="/skin/images/iabout.jpg"/>
+          <h2>爱玛，更高端的电动车</h2>
+          <h3>更精制造</h3>
+          <p>逐步实现制造的高端五化：制造管理的数据化、制造技术的智能化、制造工艺的少人化、产品研发的模块化、质量管理的全员化。</p>
+          {dede:type typeid='9'} <a class="btn btn-join" href="[field:typelink/]">了解更多</a> {/dede:type} </div>
+      </div>
+    </div>
+  </div>
+</section>
+{dede:channelartlist typeid='16,16'}
+<section id="utility" class="utility">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h2 class="lg-title text-center"><span><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></span></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="blog-carousel" class="blog-carousel"> {dede:arclist row='5' titlelen='50' orderby='pubdate'}
+          <div class="item"> <a href="[field:arcurl/]" class="thumb-link"><img src="[field:picname/]" alt="[field:title/]"/></a>
+            <h4 class="title"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h4>
+            <div class="meta"> <span><i class="fa fa-calendar"></i> [field:pubdate function="MyDate('Y-m-d',@me)"/]</span> <span> / by [field:writer/]</span> </div>
+            <p class="desc">[field:description function="cn_substr(@me,160)"/]...</p>
+          </div>
+          {/dede:arclist} </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/dede:channelartlist}
+  {dede:include filename="footer.htm"/}
+</body>
+</html>

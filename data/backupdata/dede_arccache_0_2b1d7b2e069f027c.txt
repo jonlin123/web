@@ -1,0 +1,1 @@
+INSERT INTO `dede_arccache` VALUES('786a5f16d7cb8cdd3554d86bf6af532b','1554974866','22,21,20');
